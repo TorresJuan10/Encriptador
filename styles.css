@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --background-color: rgba(243, 224, 240, 0.664);
+    --bg-2: #f6f6f6;
+    --Inter: "Inter", sans-serif;
+    --dark-blue: #0A3871;
+    --bgbotton: #d8dfe8;
+}
+
+body {
+    background-color: rgb(157, 255, 240);
+    font-family: var(--Inter);
+}
+
+
+
+.conteiner {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.condiciones-botones {
+    grid-row: 2/3;
+}
+
+
+.texto{
+    background-color: transparent;
+    border: none;
+    width: 577px;
+    height: 48px;
+}
+
+.botones {
+
+    display: flex;
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+.botones .btn-1 {
+    margin: 1rem;
+    background-color: var(--dark-blue);
+    border-radius: 25px;
+    color: var(--bg-2);
+    height: 67px;
+    width: 228px;
+}
+
+.botones .btn-2 {
+    margin: 1rem;
+    background-color: var(--bgbotton);
+    border-radius: 25px;
+    color: var(--dark-blue);
+    height: 67px;
+    width: 228px;
+}
+
+.botones .btn-1:hover {
+    background-color: var(--bgbotton);
+    color: var(--dark-blue);
+}
+
+.botones .btn-2:hover {
+    background-color: var(--dark-blue);
+    color: var(--bg-2);
+}
+
+.contenido-principal {
+    margin: 168px auto auto 240px;
+    margin-bottom: 40px;
+}
+
