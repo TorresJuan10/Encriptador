@@ -8,7 +8,7 @@
 :root {
     --background-color: rgba(243, 224, 240, 0.664);
     --bg-2: #f6f6f6;
-    --Inter: "Inter", sans-serif;
+    --Inter: font-family: "Inter", sans-serif;
     --dark-blue: #0A3871;
     --bgbotton: #d8dfe8;
     --black: #000000;
@@ -112,12 +112,13 @@ body {
 }
 
 .mensaje {
-    width: 100%;
+      width: 100%;
       box-sizing: border-box; /* Incluye padding y border en el tamaño total */
       resize: none; 
       background-color: transparent;
       border: none;
       text-align: center;
+      
 }
 
 .mensaje:focus,
@@ -126,3 +127,132 @@ body {
     outline: none;
    
 }
+
+.parrafo-mensaje {
+    padding: 1rem;
+    font-family: var(--Inter);
+}
+
+.encriptado img {
+    width: 100%;
+    height: 50%;
+}
+
+/* responsive desing */
+
+@media ( max-width: 412px) {
+
+    
+.conteiner {
+    
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+.contenido-principal {
+    height: 80%;
+    position: fixed;
+}
+
+.texto {
+    width: 80%;
+    height: 60%;
+    top: 5%;
+}
+
+.condiciones-botones {
+    margin: 0;
+    padding-top: 15rem;
+    margin-left: 1.4rem;
+}
+
+.botones {
+    display: flex;
+    width: 63%;
+}
+
+.condiciones p {
+    font-size: 16px;
+}
+
+.encriptado {
+    display: flex;
+    flex-direction: row;
+    margin-top: 25rem;
+}
+.mensaje {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+}
+
+.encriptado img {
+    display: none;
+    top: 0;
+    visibility: hidden;
+}
+
+
+}
+
+
+/* TABLET */
+
+@media ( max-width: 768px) {
+
+    
+    .conteiner {
+        
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        margin-left: 10rem;
+    }
+    .contenido-principal {
+        height: 80%;
+        position: fixed;
+    }
+    
+    .texto {
+        width: 80%;
+        height: 60%;
+        top: 5%;
+    }
+    
+    .condiciones-botones {
+        margin: 0;
+        padding-top: 15rem;
+        margin-left: 1.4rem;
+    }
+    
+    .botones {
+        display: flex;
+        width: 63%;
+    }
+    
+    .condiciones p {
+        font-size: 16px;
+    }
+    
+    .encriptado {
+        display: flex;
+        flex-direction: row;
+        margin-top: 25rem;
+        margin-left: -2.5rem;
+    }
+    .mensaje {
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .encriptado img {
+        display: none;
+        top: 0;
+        visibility: hidden;
+    }
+    }
