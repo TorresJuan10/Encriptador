@@ -72,3 +72,4 @@ botonCopiar.addEventListener("click", () => {
     botonCopiar.style.display = "none"; // Ocultar el botón de copiar nuevamente
     ingresoTexto.focus();
 });
+
