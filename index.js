@@ -25,9 +25,16 @@ let remplazar = [
     ["u", "ufat"],
 ]
 
+const replace = (nuevoValor) => {
+
+    ingresoTexto.value="";
+    tituloMensaje.innerHTML = nuevoValor;
+    muneco.style.display = "none";
+    rightInfo.style.display = "none";
+}
 
 
-
+//BOTON ENCRIPTAR
 botonEncriptar.addEventListener("click", () => {
     const texto = ingresoTexto.value.toLowerCase();
     function encriptar(newText) {
@@ -39,17 +46,12 @@ botonEncriptar.addEventListener("click", () => {
         return newText
     }
 
+    // const textoEncriptado = encriptar(texto)
 
-
-    const textoEncriptado = encriptar(texto)
-
-
-    tituloMensaje.innerHTML = textoEncriptado
-    muneco.style.display = "none";
-    rightInfo.style.display = "none";
-   
-});
-
+    replace(encriptar(texto));
+    //tituloMensaje.innerHTML = encriptar(texto);
+}); 
+//BOTON DESENCRIPTAR
 botonDesencriptar.addEventListener("click", () => {
     const texto = ingresoTexto.value.toLowerCase();
 
@@ -62,7 +64,27 @@ botonDesencriptar.addEventListener("click", () => {
         };
         return newText
     }
-    const textoDesencriptado = desencriptar(texto);
-    
-    tituloMensaje.innerHTML = textoDesencriptado;
-})
+    const textoDesencriptado = desencriptar(texto); 
+    replace(desencriptar(texto));
+
+   
+});
+
+//BOTON COPIAR
+
+botonCopiar.addEventListener("click", () => {
+    const texto = tituloMensaje.innerText || tituloMensaje.textContent;
+    navigator.clipboard.writeText(texto).then(() => {
+        // alert("Texto copiado");
+    }).catch(err => {
+        console.error("Error al copiar el texto: ", err);
+    });
+
+    tituloMensaje.innerHTML = "";
+
+    muneco.style.display = "block";
+    rightInfo.style.display = "block";
+    botonCopiar.style.display = "none";
+    ingresoTexto.focus();
+});
+
