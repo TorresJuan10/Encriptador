@@ -11,7 +11,7 @@
 <body>
     <div class="conteiner">
         <div class="contenido-principal">
-            <textarea name="texto" class="texto" id="texto" cols="30" rows="10" placeholder="Ingresa el texto aqui">
+            <textarea  autofocus name="texto" class="texto" id="ingresoTexto" cols="30" rows="10" placeholder="Ingresa el texto aqui">
             </textarea>
 
             <div class="condiciones-botones">
@@ -20,8 +20,8 @@
                 </div>
     
                 <div class="botones">
-                    <button class="btn-1" type="button" onclick="encriptar()">Encriptar</button>
-                    <button class="btn-2" type="button" onclick="desencriptar()">Desencriptar</button>
+                    <button class="btn-1" id="botonEncriptar" type="button">Encriptar</button>
+                    <button class="btn-2" id="botonDesencriptar" type="button" >Desencriptar</button>
                 </div>
                 
             </div>
@@ -34,11 +34,13 @@
             <div class="encriptar">
             
             </div>
-            <img src="images/NotFound.png" alt="imagen de requerimientos" id="muneco">
+            <img src="images/NotFound.png" alt="imagen de requerimientos" id="muneco" id="muneco">
             <div class="mensaje" id="mensaje">
-                <h2 class="titulo-mensaje" id="titulo-mensaje">Ningun mensaje fue encontrado</h2>
-                <p class="parrafo-mensaje" id="parrafo-mensaje">Ingresa el texto que deseees encriptar o desencriptar</p>
+                <h2 class="titulo-mensaje" id="tituloMensaje">Ningun mensaje fue encontrado</h2>
+                <p class="parrafo-mensaje" id="rightInfo">Ingresa el texto que deseees encriptar o desencriptar</p>
                 <!-- <textarea class="mensaje" name="mensaje" id="mensaje" cols="30" rows="10"></textarea> -->
+                <button class="btn-3" type="button" onclick="copiar()" id="botonCopiar">copiar</button>
+
             </div>
         </div><!--ciere de encriptado-->
     </div> <!--Cierre de container-->
