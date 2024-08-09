@@ -12,233 +12,155 @@
     --dark-blue: #0A3871;
     --bgbotton: #d8dfe8;
     --black: #000000;
+    --newbg: rgb(224, 219, 169);
+    --newcolor2: rgb(32, 34, 29);
 }
 
 body {
-    background-color: rgb(225, 246, 243);
+    background-color: var(--newbg);
     font-family: var(--Inter);
 }
 
+/* main */
 
-
-.conteiner {
-    position: relative;
-    width: 100%;
-    height: 100%;
+.main {
+    /* background-color: purple; */
+    width: 80%;
+    margin: auto 40px auto auto;
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 2fr 1fr;
+    min-height: calc(100vh - 91px - 72px);
+    align-items: end;
+}
+
+.left {
+/* background-color: #0a711f; */
+height: 85%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
 }
 
 .texto {
-
-    position: absolute;
-    width: 40%;
-    height: 40%;
-    left: 12%;
-    top: 15%;
-    border: none;
-    background-color: transparent;
-    font-family: var(--Inter);
-    font-weight: 400;
+    width: 80%;
     font-size: 32px;
-    line-height: 150%;
-    color: var(--black);
+    color: var(--dark-blue);
+    font-family: var(--Inter);
+    background: transparent;
+    border: none;
+    outline: none;
     resize: none;
 }
 
 .texto::placeholder {
-    color: var(--black);
+    color: var(--dark-blue);
     font-family: var(--Inter);
-}
-
-
-.texto:focus,
-.texto:active {
     border: none;
-    outline: none;
-
 }
 
+/* .left__footer {
+    background-color: darkorange ;
+} */
 
-
-/* BOTONES*/
-
-.condiciones-botones {
-    margin-left: 10rem;
-    margin-top: 35rem;
+.left__botones {
+    display: flex;
+    gap: 24px;
+    margin-top: 16px;
+    flex-wrap: wrap;
 }
 
-.condiciones p {
-    margin-left: 1.5rem;
-}
-
-.botones .btn-1 {
-    margin: 1rem;
-    background-color: var(--dark-blue);
-    border-radius: 25px;
-    color: var(--bg-2);
+.btn-1, .btn-2, .btn-3{
+    max-width: 328px;
+    width: 40%;
     height: 67px;
-    width: 228px;
+    border-radius: 24px;
+    font-size: 16px;
+
 }
 
-.botones .btn-2 {
-    margin: 1rem;
-    background-color: var(--bgbotton);
-    border-radius: 25px;
-    color: var(--dark-blue);
-    height: 67px;
-    width: 228px;
-}
-
-.botones .btn-1:hover {
-    background-color: var(--bgbotton);
-    color: var(--dark-blue);
-}
-
-.botones .btn-2:hover {
+.btn-1 {
     background-color: var(--dark-blue);
     color: var(--bg-2);
 }
-
-.mensaje .btn-3{
-    margin: 1rem;
+.btn-2 {
     background-color: var(--bgbotton);
-    border-radius: 25px;
     color: var(--dark-blue);
-    height: 67px;
-    width: 228px;
 }
 
-/*ENCRIPTADO*/
-
-.encriptado {
-    background-color: var(--bg-2);
-    margin: 4rem;
-    padding: 3rem;
-    border-radius: 4rem;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-
+.btn-3 {
+    width: 100%;
+    background-color: var(--bgbotton);
+    color: var(--dark-blue);
 }
 
-.mensaje {
-      width: 100%;
-      box-sizing: border-box; /* Incluye padding y border en el tamaño total */
-      resize: none; 
-      background-color: transparent;
-      border: none;
-      text-align: center;
-      
+
+
+.right {
+    background-color: var(--newcolor2);
+    height: 92%; 
+    height: 92%;
+    border-radius: 32px;
+    padding: 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
 }
 
-.mensaje:focus,
-.mensaje:active {
-    border: none;
-    outline: none;
-   
+.muneco {
+    width: 100%;
+}
+
+.titulo-mensaje {
+    font-family: var(--Inter);
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--bg-2);
 }
 
 .parrafo-mensaje {
-    padding: 1rem;
+    font-size: 16px;
     font-family: var(--Inter);
+    text-align: center;
+    color: var(--bgbotton);
 }
 
-.encriptado img {
-    width: 100%;
-    height: 50%;
+/* footer {
+    background-color: yellow;
+    height: 50px;
+} */
+@media (max-width: 800px) {
+ .main {
+    grid-template-columns: 1fr;
+    width: auto;
+    margin: auto 40px;
+ }  
+ .right {
+    height: 100%;
+ }
+
+ .left__botones {
+    justify-content: center;
+ }
+ .btn-1, .btn-2 {
+    width: 45%;
+ }
+ .muneco {
+    display: flex;
+ }
 }
 
-/* Tu CSS original se mantiene igual */
+@media (max-width: 500px) {
 
-/* responsive design TELEFONO */ 
-@media (max-width: 412px) {
-    .conteiner {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
+    .main {
+        margin: auto 16px;
     }
-    .contenido-principal {
-        height: 80%;
-        position: fixed;
-    }
-    .texto {
-        width: 80%;
-        height: 60%;
-        top: 5%;
-    }
-    .condiciones-botones {
-        margin: 0;
-        padding-top: 15rem;
-        margin-left: 1.4rem;
-    }
-    .botones {
-        display: flex;
-        width: 63%;
-    }
-    .condiciones p {
-        font-size: 16px;
-    }
-    .encriptado {
-        display: flex;
-        flex-direction: row;
-        margin-top: 25rem;
-    }
-    .mensaje {
-        display: flex;
-        flex-direction: column;
-        font-size: 16px;
+
+    .btn-1, .btn-2 {
+        max-width: 100%;
         width: 100%;
-        height: 100%;
-    }
-    .encriptado img {
-        display: none;
-        visibility: hidden;
-    }
-}
 
-/* TABLET */
-@media (max-width: 768px) {
-    .conteiner {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        margin-left: 0;
-    }
-    .contenido-principal {
-        height: 80%;
-        position: fixed;
-    }
-    .texto {
-        width: 80%;
-        height: 60%;
-        top: 5%;
-    }
-    .condiciones-botones {
-        margin: 0;
-        padding-top: 15rem;
-        margin-left: 1.4rem;
-    }
-    .botones {
-        display: flex;
-        width: 63%;
-    }
-    .condiciones p {
-        font-size: 16px;
-    }
-    .encriptado {
-        display: flex;
-        flex-direction: row;
-        margin-top: 25rem;
-        margin-left: -2.5rem;
-    }
-    .mensaje {
-        display: flex;
-        flex-direction: column;
-        font-size: 16px;
-        width: 100%;
-        height: 100%;
-    }
-    .encriptado img {
-        display: none;
-        visibility: hidden;
     }
 }

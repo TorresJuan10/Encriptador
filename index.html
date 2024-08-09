@@ -9,38 +9,33 @@
 </head>
 
 <body>
-    <div class="conteiner">
-        <div class="contenido-principal">
-            <textarea  autofocus name="texto" class="texto" id="ingresoTexto" cols="30" rows="10" placeholder="Ingresa el texto aqui">
-            </textarea>
 
-            <div class="condiciones-botones">
-                <div class="condiciones">
-                    <p>solo letras minusculas y sin acentos</p>
+    <main>
+        <div class="main">
+            <div class="left">
+                <textarea  autofocus name="texto" class="texto" id="ingresoTexto" placeholder="Ingresa el texto aqui">
+                </textarea>
+                <div class="left__footer">
+                    <span>Solo letras minusculas y sin acentos</span>
+                    <div class="left__botones">
+                        <button class="btn-1" id="botonEncriptar" type="button">Encriptar</button>
+                        <button class="btn-2" id="botonDesencriptar" type="button" >Desencriptar</button>
+                    </div>
                 </div>
-    
-                <div class="botones">
-                    <button class="btn-1" id="botonEncriptar" type="button">Encriptar</button>
-                    <button class="btn-2" id="botonDesencriptar" type="button" >Desencriptar</button>
-                </div>
-                
             </div>
-            
-        </div>
 
-       
-
-        <div class="encriptado">
-            <img src="images/NotFound.png" alt="imagen de requerimientos" id="muneco" id="muneco">
-            <div class="mensaje" id="mensaje">
-                <h2 class="titulo-mensaje" id="tituloMensaje">Ningun mensaje fue encontrado</h2>
-                <p class="parrafo-mensaje" id="rightInfo">Ingresa el texto que deseees encriptar o desencriptar</p>
-                <!-- <textarea class="mensaje" name="mensaje" id="mensaje" cols="30" rows="10"></textarea> -->
-                <button class="btn-3" type="button"  id="botonCopiar">copiar</button>
-
+            <div class="right">
+                    <img src="images/NotFound.png" alt="imagen de requerimientos" id="muneco" id="muneco">
+                    <p class="titulo-mensaje" id="tituloMensaje">Ningun mensaje fue encontrado</p>
+                    <p class="parrafo-mensaje" id="rightInfo">Ingresa el texto que deseees encriptar o desencriptar</p>
+                    <button class="btn-3" type="button"  id="botonCopiar">copiar</button>
             </div>
-        </div><!--ciere de encriptado-->
-    </div> <!--Cierre de container-->
+        </div><!--FIN CLASS MAIN-->
+    </main>
+<!-- 
+    <footer>
+
+    </footer> -->
 
 </body>
 
